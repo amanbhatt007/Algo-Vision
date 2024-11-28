@@ -1,0 +1,324 @@
+/* General styling for the container */
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #FFFCF2; /* Slightly lighter dark background */
+    color: #00CC99;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+}
+
+/* Styling for headings */
+h1 {
+    color: #EB5E28; /* Cyan-like color */
+    margin-bottom: 20px;
+    font-size: 2.5em; /* Larger size for prominence */
+    font-family: 'DM Serif Text';
+    font-size: 50px;
+}
+
+/* Input for number of elements */
+#numElements {
+    width: 170px; /* Increased width */
+    padding: 10px; /* Increased padding */
+    border: 1px solid #4a4a4a;
+    border-radius: 4px;
+    background-color: #CCC5B9;
+    font-family: 'DM Serif Text';
+    font-size: 20px;
+    color: #252422;
+    transition: border-color 0.3s; /* Transition for interaction */
+}
+
+#numElements:focus {
+    border-color: #00d1b2; /* Cyan border on focus */
+}
+
+/* Button styling */
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #252422;
+    color: #EB5E28;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 30px;
+    font-family: 'New Amsterdam';
+    font-weight: 900;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #FFFCF2;
+    color: #252422;
+    transform: translateY(-2px); /* Subtle lift effect on hover */
+}
+
+/* Button styling */
+.button-52 {
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 13px 20px 13px;
+    outline: 0;
+    border: 1px solid #252422;
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .button-52:after {
+    content: "";
+    background-color: #EB5E28;
+    color: #252422;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    top: 7px;
+    left: 7px;
+    transition: 0.2s;
+  }
+  
+  .button-52:hover:after {
+    top: 0px;
+    left: 0px;
+    color:#252422;
+  }
+  
+  @media (min-width: 768px) {
+    .button-52 {
+      padding: 13px 50px 13px;
+    }
+  }
+  
+/* Grid for input fields */
+#inputFields {
+    margin: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(8%, 2fr)); /* Adjusted to be more responsive */
+    gap: 15px; /* Increased gap for better spacing */
+}
+
+/* Styling for each input field */
+.element-input {
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    border: 1px solid #4a4a4a;
+    border-radius: 4px;
+    background-color: #CCC5B9;
+    color: #252422;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+    font-family: 'New Amsterdam';
+    font-size: 25px;
+    align-items: center;
+}
+
+.element-input:focus {
+    border-color: #00d1b2; /* Cyan border on focus */
+}
+
+/* Container for the array elements */
+.array-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid #4a4a4a;
+    border-radius: 4px;
+    background-color: #CCC5B9;
+}
+
+/* Styling for each array element */
+.array-container span {
+    display: inline-block;
+    padding: 15px;
+    margin: 5px;
+    border: 1px solid #4a4a4a;
+    border-radius: 4px;
+    background-color: #252422;
+    color: #FFEE88;
+    font-size: 22px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.array-container span:hover {
+    background-color: #4a4a4a; /* Darker shade on hover */
+}
+
+/* Highlighting styles */
+.compare {
+    background-color: #f39c12; /* Yellow for comparing */
+    color: #1e1e1e;
+    border: 1px solid #e67e22;
+}
+
+.swap {
+    background-color: #00CC99; /* Red for swapping */
+    color: #00CC99;
+    border: 1px solid #c0392b;
+}
+
+/* Swap animation */
+.swap-animation {
+    animation: swapAnimation 0.5s ease-in-out;
+}
+
+/* Keyframes for swap animation */
+@keyframes swapAnimation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Arrow for visual indication */
+.arrow {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 15px solid #EB5E28;
+    margin: 10px auto;
+    animation: arrowBounce 1s infinite;
+}
+
+/* Arrow bounce animation */
+@keyframes arrowBounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Styling for the result display */
+#result {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #e0e0e0;
+    font-weight: bold; /* Make result stand out */
+}
+
+/* Styling for steps and explanations */
+#steps {
+    margin-top: 30px;
+    text-align: left;
+    font-size: 22px;
+    color: #EB5E28 !important;
+    font-family: 'New Amsterdam';
+}
+
+/* Apply dark background and text color to the entire page */
+body {
+    background-color: #252422;
+    color: #252422;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Ensure all form elements and inputs use dark theme colors */
+input, select, textarea {
+    background-color:#EB5E28 ;
+    color: #e0e0e0;
+    border: 1px solid #EB5E28;
+    padding: 10px;
+    border-radius: 4px;
+    transition: border-color 0.3s; /* Transition for interaction */
+}
+
+input::placeholder, textarea::placeholder {
+    color: #252422;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #00d1b2; /* Cyan border on focus */
+}
+
+/* Ensure all links are appropriately styled */
+a {
+    color: #EB5E28;
+    text-decoration: none;
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+a:hover {
+    color: #008b8b;
+    text-decoration: underline;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em; /* Smaller heading on smaller screens */
+    }
+    
+    .container {
+        padding: 15px; /* Reduced padding on smaller screens */
+    }
+
+    #numElements {
+        width: 70px; /* Adjusted width for smaller screens */
+    }
+
+    button {
+        padding: 8px 15px; /* Reduced button size */
+    }
+
+    .array-container span {
+        font-size: 16px; /* Smaller font for array elements */
+    }
+}
+
+@media (max-width: 400px) {
+    #inputFields {
+        grid-template-columns: 1fr; /* Single column for very small screens */
+    }
+}
+.current {
+    background-color: lightblue;
+    font-weight: bold;
+}
+
+.swap {
+    background-color: lightcoral;
+}
+
+.insert {
+    background-color: lightgreen;
+    font-weight: bold;
+}
+
+.swap-animation {
+    animation: swapAnimation 0.5s;
+}
+
+.insert-animation {
+    animation: insertAnimation 0.5s;
+}
+
+@keyframes swapAnimation {
+    from { background-color: lightcoral; }
+    to { background-color: transparent; }
+}
+
+@keyframes insertAnimation {
+    from { background-color: lightgreen; }
+    to { background-color: transparent; }
+}

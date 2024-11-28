@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SORTED</title>
+    <link rel="stylesheet" href="sort.css">
+    <link href='https://fonts.googleapis.com/css?family=Tangerine' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Allura' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to SORTED</h1>
+        <div>
+            <label for="numElements" style="font-family: 'New Amsterdam'; font-size: 25px; color: #EB5E28;" >Number Of Elements:</label>
+            <input type="number" id="numElements" min="1" >
+            <button class="button-52" onclick="generateInputFields()">Generate Inputs</button>
+        </div>
+        <div id="inputFields"></div>
+        <button class="button-52" onclick="sortArray('bubble')">Bubble Sort</button>
+        <button class="button-52" onclick="sortArray('selection')">Selection Sort</button>
+        <button class="button-52" onclick="sortArray('quick')">Quick Sort</button>
+        <button class="button-52" onclick="sortArray('merge')">Merge Sort</button>
+        <button class="button-52" onclick="sortArray('insertion')">Insertion Sort</button>
+        <button class="button-52" onclick="clearAllSteps()">Reset</button>
+        <div id="result"></div>
+        <div id="steps"></div>
+        <div id="visualization" class="merge-sort-visualization"></div>
+    </div>
+    <div id="result"></div>
+    <div id="steps"></div>
+    <script src="sort.js"></script>
+    
+    <!-- Add the Sortable.js library script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
+</body>
+</html>
